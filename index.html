@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gaydel Digital — Démos</title>
+<meta name="description" content="Maquettes de sites internet réalisées par Gaydel Digital pour ses clients : démos cliquables, sur ordinateur et mobile.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#14161F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Mise en page : en-tête sombre, grille de cartes de démos, pied de page discret */
+:root{
+  --encre:#14161F; --encre-2:#232634; --papier:#F6F5F1; --blanc:#FFFFFF;
+  --texte:#3A3D4A; --doux:#6A6E7E; --trait:#E2E0D8; --accent:#5B5BF0; --accent-2:#B9B9FF;
+  --display:'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --corps:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--papier);color:var(--encre);font-family:var(--corps);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+header{background:var(--encre);color:#fff;padding-block:clamp(48px,8vw,104px) clamp(56px,8vw,96px);position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-140px;top:-160px;width:460px;height:460px;border-radius:50%;border:70px solid var(--encre-2);pointer-events:none}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.01em}
+.brand i{width:34px;height:34px;border-radius:10px;background:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:18px;color:#fff}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(38px,6vw,76px);line-height:1.02;letter-spacing:-.03em;margin:clamp(28px,4vw,48px) 0 18px;max-width:14ch;text-wrap:balance}
+h1 span{color:var(--accent-2)}
+.lead{font-size:clamp(16px,1.5vw,19px);color:#C9CBD6;max-width:58ch;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.meta span{font-size:13px;font-weight:600;border:1px solid #3A3E52;border-radius:999px;padding:7px 14px;color:#DADCE6}
+main{padding-block:clamp(48px,7vw,88px)}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:28px}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(26px,3vw,36px);letter-spacing:-.02em;margin:0}
+.count{font-size:14px;color:var(--doux)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:24px}
+.demo{background:var(--blanc);border:1px solid var(--trait);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:transform .2s ease, box-shadow .2s ease}
+.demo:hover{transform:translateY(-3px);box-shadow:0 24px 50px -30px rgba(20,22,31,.5)}
+.shot{aspect-ratio:16/10;background:#E9E7E0;overflow:hidden;border-bottom:1px solid var(--trait)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.client{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--doux)}
+.demo h3{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.01em;margin:0;line-height:1.2}
+.demo p{margin:0;font-size:15px;color:var(--texte)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.tags span{font-size:12.5px;background:var(--papier);border-radius:999px;padding:4px 10px;color:var(--texte)}
+.go{margin-top:auto;padding-top:10px;font-weight:600;font-size:15px;color:var(--accent);display:inline-flex;align-items:center;gap:8px}
+.soon{border-style:dashed;background:transparent;align-items:center;justify-content:center;text-align:center;padding:40px 24px;min-height:260px;color:var(--doux);gap:8px}
+.soon strong{font-family:var(--display);font-size:20px;color:var(--encre)}
+.note{margin-top:40px;font-size:14px;color:var(--doux);max-width:70ch}
+footer{border-top:1px solid var(--trait);padding-block:28px;font-size:13px;color:var(--doux)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media (prefers-reduced-motion:reduce){.demo{transition:none}.demo:hover{transform:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand"><i aria-hidden="true">G</i>Gaydel Digital</div>
+    <h1>Des sites qui <span>travaillent pour vous</span></h1>
+    <p class="lead">Retrouvez ici les maquettes de sites que nous préparons pour nos clients. Chaque démo est cliquable et fonctionne sur ordinateur comme sur téléphone.</p>
+    <div class="meta"><span>Sites vitrines</span><span>Responsive</span><span>Maquettes cliquables</span></div>
+  </div>
+</header>
+
+<main class="wrap" id="demos">
+  <div class="head"><h2>Nos démos</h2><span class="count">1 démo en ligne</span></div>
+  <div class="grid">
+
+    <!-- DÉMO : GSL-ELEC — pour ajouter une démo, copiez ce bloc <a class="demo">…</a> et changez lien, image et textes -->
+    <a class="demo" href="https://dadalo29.github.io/gsl-elec-maquette/">
+      <div class="shot"><img src="images/gsl-elec.jpg" alt="Page d’accueil du site GSL-ELEC" width="1200" height="750" loading="lazy"></div>
+      <div class="body">
+        <span class="client">GSL-ELEC · Sénégal</span>
+        <h3>Solaire et électricité</h3>
+        <p>Site vitrine orienté demandes de devis : simulateur d’économies, page phare batteries haute tension, catalogue d’équipements.</p>
+        <div class="tags"><span>29 pages</span><span>Mobile d’abord</span><span>Simulateur</span><span>WhatsApp</span></div>
+        <span class="go">Voir la démo <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+
+    <div class="demo soon" aria-hidden="true"><strong>Prochaine démo</strong><span>Votre projet ici</span></div>
+  </div>
+  <p class="note">Ces pages sont des maquettes de présentation : les contenus entre crochets sont à fournir par chaque client, et les formulaires n’envoient pas de données.</p>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Gaydel Digital</span><span>Démos hébergées sur GitHub Pages</span></div></footer>
+</body>
+</html>
